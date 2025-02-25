@@ -1,0 +1,13 @@
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+.link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}

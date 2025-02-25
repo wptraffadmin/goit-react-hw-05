@@ -1,0 +1,21 @@
+.container {
+    padding: 20px;
+}
+
+.backButton {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.backButton:hover {
+    background-color: #0056b3;
+}
+
+img {
+    max-width: 300px;
+    margin-bottom: 20px;
+}
