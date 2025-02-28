@@ -30,9 +30,11 @@ const MovieDetailsPage = () => {
 
   const handleGoBack = () => {
     const from = location.state?.from || '/movies';
-    const query = location.state?.query;
-    const movies = location.state?.movies;
-    navigate(from, { state: { query, movies } });
+    const stateToPass = {
+      query: location.state?.query || '',
+      movies: location.state?.movies || [],
+    };
+    navigate(from, { state: stateToPass });
   };
 
   if (!movie) return <div>Loading...</div>;
