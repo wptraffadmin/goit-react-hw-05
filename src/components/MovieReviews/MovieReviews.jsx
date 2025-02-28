@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import api from '../../api/tmdb'; // Імпорт api
 import styles from './MovieReviews.module.css';
 
-function MovieReviews() {
+const MovieReviews = () => {
   const { movieId } = useParams();
   const [reviews, setReviews] = useState([]);
 

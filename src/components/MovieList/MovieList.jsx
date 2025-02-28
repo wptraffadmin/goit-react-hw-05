@@ -4,7 +4,7 @@ import styles from './MovieList.module.css';
 
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 
-function MovieList({ movies, onBeforeNavigate }) {
+const MovieList = ({ movies, onBeforeNavigate }) => {
   const location = useLocation();
 
   const handleNavigate = () => {

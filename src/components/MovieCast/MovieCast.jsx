@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import api from '../../api/tmdb'; // Імпорт api
+import api from '../../api/tmdb';
 import styles from './MovieCast.module.css';
 
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 
-function MovieCast() {
+const MovieCast = () => {
   const { movieId } = useParams();
   const [cast, setCast] = useState([]);
 
