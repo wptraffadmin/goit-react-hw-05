@@ -4,15 +4,8 @@ import styles from './MovieList.module.css';
 
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 
-const MovieList = ({ movies, onBeforeNavigate }) => {
+const MovieList = ({ movies }) => {
   const location = useLocation();
-
-  const handleNavigate = () => {
-    if (onBeforeNavigate) {
-      return onBeforeNavigate();
-    }
-    return {};
-  };
 
   return (
     <ul className={styles.list}>
@@ -20,10 +13,7 @@ const MovieList = ({ movies, onBeforeNavigate }) => {
         <li key={movie.id} className={styles.item}>
           <Link
             to={`/movies/${movie.id}`}
-            state={{
-              from: location.pathname,
-              ...handleNavigate(), // Передаємо лише query і movies, якщо є
-            }}
+            state={{from: location}}
             className={styles.link}
           >
             <img
